@@ -1,0 +1,120 @@
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: rgba(0,0,0,0.85);
+    z-index: -1;
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: 1.5s cubic-bezier(0.2,0.8,0.2,1);
+}
+
+.popup-box h2 {
+    background: linear-gradient(104deg, #5151E5 0%, #72EDF2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px auto;
+}
+
+.popup-box input {
+    width: 80%;
+    height: 30px;
+    margin: 20px auto;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    padding: 3px;
+}
+
+.InputBtnGroup button {
+    position: relative;
+    display: inline-block;;
+    padding: 10px 15px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
+.InputBtnGroup button:nth-child(1){
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+.InputBtnGroup button:nth-child(2) {
+    background: linear-gradient(90deg, #755bea, #ff72c0);
+}
+
+@keyframes rubberBandAnimation {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    35% {
+        transform: scale3d(1.25, .75, 1);
+    }
+    45% {
+        transform: scale3d(.75, 1, 1);
+    }
+    60% {
+        transform: scale3d(1.2, .8, 1);
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .popup-box h2 {
+        background: linear-gradient(104deg, #123597, #97ABFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .popup-box input {
+        border: #333;
+        background-color: #555;
+        color: white;
+    }
+
+    .InputBtnGroup button {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .InputBtnGroup button:active {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .popup-box h2 {
+        background: linear-gradient(104deg, #5151E5, #72EDF2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .popup-box input {
+        border: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 1);
+        color: #333;
+    }
+
+    .InputBtnGroup button {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .InputBtnGroup button:active {
+        color: rgba(255, 255, 255, 1);
+    }
+}

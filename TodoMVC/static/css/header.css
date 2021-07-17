@@ -1,0 +1,183 @@
+header {
+    margin: 20px 0;
+}
+
+header .HeaderGroup {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* spotlight */
+.spotlight {
+    color: white;
+    border: none;
+    font-family: Helvetica, serif;
+    font-size: 3rem;
+    position: relative;
+    text-align: center;
+    /* display: inline-block; */
+}
+.spotlight::after {
+    content: attr(data-spotlight);
+    color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    /*circle mask*/
+    clip-path: ellipse(100px 100px at 0% 50%);
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+
+    /*background mask*/
+    background-image: linear-gradient(104deg, #5151E5, #72EDF2);
+    background-size: 150%;
+    background-position: center center;
+    -webkit-background-clip: text;
+
+    animation: spotlight 5s infinite;
+}
+
+@keyframes spotlight {
+    0% {
+        clip-path: ellipse(100px 100px at 0% 50%);
+        -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    }
+
+    50% {
+        clip-path: ellipse(100px 100px at 100% 50%);
+        -webkit-clip-path: ellipse(100px 100px at 100% 50%);
+    }
+
+    100% {
+        clip-path: ellipse(100px 100px at 0% 50%);
+        -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    }
+}
+
+header label {
+    font-size: 3rem;
+}
+
+.HeaderSubGroup {
+    width: 90%;
+    margin: 20px auto 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+    border-bottom: 3px solid white;
+}
+
+.HeaderSubGroup span {
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.HeaderSubGroup .tools {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.HeaderSubGroup .tools li {
+    text-decoration: none;
+    
+}
+
+.HeaderSubGroup .tools li button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 5px;
+    outline: none;
+    padding: 7px;
+    transition: .3s cubic-bezier(0.2,0.8,0.2,1);
+}
+
+.HeaderSubGroup .tools li button:active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    header .HeaderGroup {
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    }
+    
+    .spotlight {
+        color: #333;
+    }
+    .spotlight::after {
+        background-image: linear-gradient(104deg, #123597, #97ABFF);
+        background-size: 150%;
+        background-position: center center;
+        -webkit-background-clip: text;
+    }
+
+    .HeaderSubGroup {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.5);;
+    }
+    
+    .HeaderSubGroup span {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .HeaderSubGroup .tools li button {
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .HeaderSubGroup .tools li button:active {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    header .HeaderGroup {
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    
+    .spotlight {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .spotlight::after {
+        background-image: linear-gradient(104deg, #5151E5, #72EDF2);
+        background-size: 150%;
+        background-position: center center;
+        -webkit-background-clip: text;
+    }
+
+    .HeaderSubGroup {
+        border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    }
+    
+    .HeaderSubGroup span {
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .HeaderSubGroup .tools li button {
+        color: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(0, 0, 0, 0.4);
+    }
+    
+    .HeaderSubGroup .tools li button:active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}

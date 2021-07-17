@@ -1,0 +1,116 @@
+.float-btns {
+    transform: perspective(400);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 900;
+}
+
+.ButtonGroup {
+    --btn-length: 60px;
+    text-align: center;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    transform: translateY(-30px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ButtonGroup i {
+    width: var(--btn-length);
+    height: var(--btn-length);
+    line-height: var(--btn-length);
+    border-radius: 50%;
+    font-size: 30px;
+    position: relative;
+    color: white;
+    background-image: linear-gradient(104deg, #5151E5, #72EDF2);
+}
+
+.ButtonGroup a i {
+    position: absolute;
+    top: calc(var(--btn-length) * 0.25);
+    left: calc(var(--btn-length) * 0.25);
+
+    height: calc(var(--btn-length) * 0.5);
+    width: calc(var(--btn-length) * 0.5);
+    line-height: calc(var(--btn-length) * 0.5);
+    font-size: 10px;
+    z-index: -1;
+    text-decoration: none;
+    opacity: 0;
+    background-image: none;
+
+    transition: .6s;
+}
+
+#ButtonGroup-click {
+    display: none;
+}
+
+#ButtonGroup-click:checked ~ .ButtonGroup i {
+    color: rgba(255, 255, 255, 1);
+}
+
+#ButtonGroup-click:checked ~ .ButtonGroup a i {
+    height: calc(var(--btn-length) - 10px);
+    width: calc(var(--btn-length) - 10px);
+    line-height: calc(var(--btn-length) - 10px);
+    font-size: 30px;
+    opacity: 1;
+    z-index: 1;
+}
+
+#ButtonGroup-click:checked ~ .ButtonGroup a:nth-child(1) i {
+    top: calc(var(--btn-length) * 0.5);
+    left: calc(var(--btn-length) * -1.0);
+    background-color: #FCCF31;
+}
+
+#ButtonGroup-click:checked ~ .ButtonGroup a:nth-child(2) i {
+    top: calc(var(--btn-length) * -0.5);
+    left: calc(var(--btn-length) * -0.8);
+    background-color: #7367F0;
+}
+
+#ButtonGroup-click:checked ~ .ButtonGroup a:nth-child(3) i {
+    top: calc(var(--btn-length) * -1.0);
+    left: calc(var(--btn-length) * 0.2);
+    background-color: #32CCBC;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ButtonGroup i {
+        color: rgba(255, 255, 255, 0.6);;
+        background-image: linear-gradient(104deg, #123597, #97ABFF);
+    }
+    
+    .ButtonGroup a i {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #ButtonGroup-click:checked ~ .ButtonGroup i {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .ButtonGroup i {
+        color: rgba(255, 255, 255, 0.9);
+        background-image: linear-gradient(104deg, #5151E5, #72EDF2);
+    }
+    
+    .ButtonGroup a i {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    #ButtonGroup-click:checked ~ .ButtonGroup i {
+        color: rgba(255, 255, 255, 1);
+    }
+}
