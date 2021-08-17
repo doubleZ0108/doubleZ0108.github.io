@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+.header {
+    position: relative;
+    background: linear-gradient(60deg,rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+}
+.blank {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.WaveMultiGroup {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.WaveMultiGroup path {
+    animation: multiwavemove 30s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.WaveMultiGroup path:nth-child(1) {
+    transform: translateY(0px);
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.WaveMultiGroup path:nth-child(2) {
+    transform: translateY(1px);
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.WaveMultiGroup path:nth-child(3) {
+    transform: translateY(2px);
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.WaveMultiGroup path:nth-child(4) {
+    transform: translateY(3px);
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes multiwavemove {
+    0% {
+        transform: translate3d(-30px,0,0);
+    }
+    60% {
+        transform: translate3d(80px,0,0);
+    }
+    100% {
+        transform: translate3d(-30px,0,0);
+    }
+}
+@media (max-width : 768px) {
+    .waves-multi {
+        height: 40px;
+        min-height: 40px;
+    }
+}

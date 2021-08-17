@@ -1,0 +1,220 @@
+html {
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.apple-style-gallery {
+    --gallery-width-block: 8;
+    --gallery-height-block: 10;
+    --block-width: 120px;
+    --block-height: 60px;
+
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: calc(var(--gallery-width-block)*var(--block-width));
+    height: calc(var(--gallery-height-block)*var(--block-height));
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "  left-top      left-top      left-top        top-1        top-2         top-2       right-top     right-top"
+    "  left-top      left-top      left-top        top-1        top-2         top-2       right-top     right-top"
+    "  left-top      left-top      left-top        top-1        top-2         top-2       right-top     right-top"
+    "  left-top      left-top      left-top        top-1        top-2         top-2       right-top     right-top"
+    "    text          text          text      center-topic  center-topic     icon        right-top     right-top"
+    "left-bottom-1 left-bottom-3 left-bottom-3 center-topic  center-topic     icon        right-top     right-top"
+    "left-bottom-1 left-bottom-3 left-bottom-3    bottom        bottom     right-bottom right-bottom right-bottom"
+    "left-bottom-1 left-bottom-3 left-bottom-3    bottom        bottom     right-bottom right-bottom right-bottom"
+    "left-bottom-2 left-bottom-3 left-bottom-3    bottom        bottom     right-bottom right-bottom right-bottom"
+    "left-bottom-2 left-bottom-3 left-bottom-3    bottom        bottom     right-bottom right-bottom right-bottom";
+
+    /* grid-template-columns: repeat(8, var(--block-width));
+    grid-template-rows: repeat(10, var(--block-height)); */
+
+    grid-template-columns: repeat(8, 2fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+
+    transition: 2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+/* .apple-style-gallery:hover {
+    display: grid;
+    grid-template-areas: 
+    "left-top left-top top-1 top-2 top-2 right-top right-top right-top"
+    "left-top left-top top-1 top-2 top-2 right-top right-top right-top"
+    "left-top left-top top-1 top-2 top-2 right-top right-top right-top"
+    "left-top left-top icon top-2 top-2 right-top right-top right-top"
+    "left-top left-top icon center-topic center-topic right-bottom right-bottom right-bottom"
+    "text text text center-topic center-topic right-bottom right-bottom right-bottom"
+    "left-bottom-1 left-bottom-3 bottom bottom bottom right-bottom right-bottom right-bottom"
+    "left-bottom-1 left-bottom-3 bottom bottom bottom right-bottom right-bottom right-bottom"
+    "left-bottom-2 left-bottom-2 bottom bottom bottom right-bottom right-bottom right-bottom"
+    "left-bottom-2 left-bottom-2 bottom bottom bottom right-bottom right-bottom right-bottom";
+} */
+
+.gallery-frame {
+    background-color: rgb(26, 26, 26);
+    border-radius: 15px;
+    /* transform: scale(0.975); */
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+}
+.gallery-frame:hover {
+    transform: scale(1.3);
+    z-index: 5;
+}
+
+.gallery-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.gallery-frame:hover img {
+    transform: scale(1.15);
+}
+
+#center-topic {
+    background: linear-gradient(125deg, rgb(247,59,12) 0%, rgb(5,64,190) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#center-topic:hover {
+    transform: scale(2);
+}
+
+#center-topic h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+#right-top {
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+}
+
+#right-top div {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    object-fit:cover;
+    overflow: hidden;
+}
+
+#right-top div img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#icon {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+#icon div {
+    border-radius: 50%;
+    object-fit:cover;
+    overflow: hidden;
+    font-size: .5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icon div img {
+    width: 80px;
+    height: 80px;
+    object-fit:cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#text {
+    font-size: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .8s cubic-bezier(.2,.8,.2,1);
+}
+#text div p {
+    margin: 0;
+}
+#text label {
+    background: linear-gradient(125deg, rgb(247,59,12) 0%, rgb(5,64,190) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#left-bottom-1 {
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+}
+#left-bottom-1 div {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+    font-size: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left-bottom-1 div img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+#left-bottom-1:hover div img {
+    transform: scale(1);
+}
+
+#left-bottom-3 {
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 9fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+#left-bottom-3 div {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+    font-size: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left-bottom-3 div img {
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+}
+#left-bottom-3 div p {
+    margin: 0;
+    margin-bottom: 10px;
+}
