@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calendar</title>
+
+    <link rel="stylesheet" href="static/css/basic-calendar.css">
+    <script src="static/js/calendar.js"></script>
+    <script src="static/js/basic-calendar.js"></script>
+</head>
+<body>
+    <div class="basic-calendar">
+        <div class="header" style="grid-area: header;">
+            <div class="left-part">
+                <div id="year-left" class="nev">&lt;&lt;</div>
+                <div id="month-left" class="nev">&lt;</div>
+            </div>
+            <h1 id="current-year-month">November<br />2017</h1>
+            <div class="right-part">
+                <div id="month-right" class="nev">&gt;</div>
+                <div id="year-right" class="nev">&gt;&gt;</div>
+            </div>
+        </div>
+        <div id="weeks" class="weeks" style="grid-area: weeks;">
+            <!-- <div class="week" style="grid-area: Monday;">Monday</div> -->
+        </div>
+        <div id="days" class="days" style="grid-area: days;">
+            <!-- <div class="day" id="day1" style="grid-area: day-1;">1</div> -->
+        </div>
+    </div>
+</body>
+</html>

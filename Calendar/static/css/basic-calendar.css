@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 禁止文字被选中 */
+    -moz-user-select:none;      /*火狐*/
+    -webkit-user-select:none;   /*webkit浏览器*/
+    -ms-user-select:none;       /*IE10*/
+    -khtml-user-select:none;    /*早期浏览器*/
+    user-select:none;
+}
+
+.basic-calendar {
+    --button-width: 100px;
+    --button-height: 100px;
+
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "weeks"
+    "days";
+    grid-template-rows:repeat(3, auto);
+    align-items: center;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+/* ========= header =========== */
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+}
+.header h1 {
+    font-size: 30px;
+}
+.header .nev {
+    --nev-width: 50px;
+    --nev-height: 50px;
+    width: var(--nev-width);
+    height: var(--nev-height);
+    line-height: var(--nev-height);
+    border-radius: calc(var(--nev-height) / 2);
+
+    display: inline-block;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.8s cubic-bezier(0.2,0.8,0.2,1);
+}
+.header .nev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+}
+.header .left-part {
+    justify-self: flex-start;
+}
+.header .right-part {
+    justify-self: flex-end;
+}
+
+/* ========= weeks =========== */
+.weeks {
+    display: grid;
+    grid-template-areas: "Monday Tuesday Wednesday Thursday Friday Saturday Sunday";
+    grid-template-columns: repeat(7, var(--button-width));
+    align-items: center;
+}
+
+.week {
+    padding: 10px;
+    background-color: lightgrey;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ========= days =========== */
+.days {
+    display: grid;
+    grid-template-areas: 
+    "day-1   day-2   day-3   day-4   day-5   day-6   day-7"
+    "day-8   day-9   day-10  day-11  day-12  day-13  day-14"
+    "day-15  day-16  day-17  day-18  day-19  day-20  day-21"
+    "day-22  day-23  day-24  day-25  day-26  day-27  day-28"
+    "day-29  day-30  day-31  day-32  day-33  day-34  day-35"
+    "day-36  day-37  day-38  day-39  day-40  day-41  day-42";
+
+    grid-template-rows: repeat(6, var(--button-height));
+    grid-template-columns: repeat(7, var(--button-width));
+    align-items: center;
+    justify-items: center;
+}
+
+.day {
+    height: var(--button-height);
+    width: var(--button-width);
+    line-height: var(--button-height);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: .8s cubic-bezier(0.2,0.8,0.2,1);
+}
+.day:hover {
+    background-color: rgba(0, 0, 0, 0.1);;
+}
+
+
+/* ========= Adaotive =========== */
+/* Adapt for iPhone */
+@media screen and (max-width:600px) {
+    .basic-calendar {
+        --button-width: 45px;
+        --button-height: 45px;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header .nev {
+        --nev-width: 30px;
+        --nev-height: 30px;
+    }
+}
+
+/* Adapt for iPad */
+@media screen and (min-width:600px) and (max-width:1200px) {
+    .basic-calendar {
+        --button-width: 80px;
+        --button-height: 80px;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
