@@ -1,0 +1,24 @@
+{
+    "navigator": [
+        {
+            "href": "index#",
+            "content": "济·忆",
+            "title": "TJ Memory"
+        },
+        {
+            "href": "index#calendar-anchor",
+            "content": "同济日历",
+            "title": "Tongji Calendar"
+        },
+        {
+            "href": "index#history-anchor",
+            "content": "同济印记",
+            "title": "Tongji Imprinting"
+        },
+        {
+            "href": "index#social-media-anchor",
+            "content": "关于作者",
+            "title": "About the Author"
+        }
+    ]
+}
