@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Transfer Demo</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Style Transfer Demo</h1>
+    <a href="https://github.com/Huage001/AdaAttN">AdaAttN: Revisit Attention Mechanism in Arbitrary Neural Style Transfer</a>
+    <br />
+    <h3>crop_eegn_crop_doubleZ</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_doubleZ_c.png">
+              <img src="images/crop_eegn_crop_doubleZ_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_doubleZ_cs.png">
+              <img src="images/crop_eegn_crop_doubleZ_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_doubleZ_s.png">
+              <img src="images/crop_eegn_crop_doubleZ_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_pku_crop_doubleZ</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_doubleZ_c.png">
+              <img src="images/crop_pku_crop_doubleZ_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_doubleZ_cs.png">
+              <img src="images/crop_pku_crop_doubleZ_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_doubleZ_s.png">
+              <img src="images/crop_pku_crop_doubleZ_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_shanghai1_crop_doubleZ</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_doubleZ_c.png">
+              <img src="images/crop_shanghai1_crop_doubleZ_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_doubleZ_cs.png">
+              <img src="images/crop_shanghai1_crop_doubleZ_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_doubleZ_s.png">
+              <img src="images/crop_shanghai1_crop_doubleZ_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_doubleZ_crop_eegn</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_eegn_c.png">
+              <img src="images/crop_doubleZ_crop_eegn_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_eegn_cs.png">
+              <img src="images/crop_doubleZ_crop_eegn_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_eegn_s.png">
+              <img src="images/crop_doubleZ_crop_eegn_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_pku_crop_eegn</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_eegn_c.png">
+              <img src="images/crop_pku_crop_eegn_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_eegn_cs.png">
+              <img src="images/crop_pku_crop_eegn_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_eegn_s.png">
+              <img src="images/crop_pku_crop_eegn_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_pku1_crop_eegn</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku1_crop_eegn_c.png">
+              <img src="images/crop_pku1_crop_eegn_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku1_crop_eegn_cs.png">
+              <img src="images/crop_pku1_crop_eegn_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku1_crop_eegn_s.png">
+              <img src="images/crop_pku1_crop_eegn_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_shanghai1_crop_eegn</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_eegn_c.png">
+              <img src="images/crop_shanghai1_crop_eegn_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_eegn_cs.png">
+              <img src="images/crop_shanghai1_crop_eegn_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_eegn_s.png">
+              <img src="images/crop_shanghai1_crop_eegn_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_shanghai1_crop_pku</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_pku_c.png">
+              <img src="images/crop_shanghai1_crop_pku_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_pku_cs.png">
+              <img src="images/crop_shanghai1_crop_pku_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai1_crop_pku_s.png">
+              <img src="images/crop_shanghai1_crop_pku_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_eegn_crop_pku1</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_pku1_c.png">
+              <img src="images/crop_eegn_crop_pku1_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_pku1_cs.png">
+              <img src="images/crop_eegn_crop_pku1_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_pku1_s.png">
+              <img src="images/crop_eegn_crop_pku1_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_shanghai2_crop_pku1</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai2_crop_pku1_c.png">
+              <img src="images/crop_shanghai2_crop_pku1_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai2_crop_pku1_cs.png">
+              <img src="images/crop_shanghai2_crop_pku1_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_shanghai2_crop_pku1_s.png">
+              <img src="images/crop_shanghai2_crop_pku1_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_tongji2_crop_pku1</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_tongji2_crop_pku1_c.png">
+              <img src="images/crop_tongji2_crop_pku1_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_tongji2_crop_pku1_cs.png">
+              <img src="images/crop_tongji2_crop_pku1_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_tongji2_crop_pku1_s.png">
+              <img src="images/crop_tongji2_crop_pku1_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_doubleZ_crop_shanghai1</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_shanghai1_c.png">
+              <img src="images/crop_doubleZ_crop_shanghai1_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_shanghai1_cs.png">
+              <img src="images/crop_doubleZ_crop_shanghai1_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_shanghai1_s.png">
+              <img src="images/crop_doubleZ_crop_shanghai1_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_eegn_crop_shanghai1</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_shanghai1_c.png">
+              <img src="images/crop_eegn_crop_shanghai1_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_shanghai1_cs.png">
+              <img src="images/crop_eegn_crop_shanghai1_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_eegn_crop_shanghai1_s.png">
+              <img src="images/crop_eegn_crop_shanghai1_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_doubleZ_crop_shanghai2</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_shanghai2_c.png">
+              <img src="images/crop_doubleZ_crop_shanghai2_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_shanghai2_cs.png">
+              <img src="images/crop_doubleZ_crop_shanghai2_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_doubleZ_crop_shanghai2_s.png">
+              <img src="images/crop_doubleZ_crop_shanghai2_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <h3>crop_pku_crop_shanghai2</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_shanghai2_c.png">
+              <img src="images/crop_pku_crop_shanghai2_c.png" style="width:256px">
+            </a><br>
+            <p>c</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_shanghai2_cs.png">
+              <img src="images/crop_pku_crop_shanghai2_cs.png" style="width:256px">
+            </a><br>
+            <p>cs</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images/crop_pku_crop_shanghai2_s.png">
+              <img src="images/crop_pku_crop_shanghai2_s.png" style="width:256px">
+            </a><br>
+            <p>s</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
